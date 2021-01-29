@@ -1,0 +1,15 @@
+$nomention
+$title[Информация о пользователе]
+$description[📋 Биография <@$mentioned[1;yes]>: $getUserVar[Биография;$mentioned[1;yes]]
+🆔 <@$mentioned[1;yes]>: $mentioned[1;yes]
+💳 Имя: $username[$mentioned[1;yes]]
+📧 Упомянание: <@$mentioned[1;yes]>
+🔋 Тег: #$discriminator[$mentioned[1;yes]]
+🎭 Роли: $userRoles[$mentioned[1;yes]]
+💰 Баланс: Наличными: $getUserVar[money;$mentioned[1;yes]] ФортиКоинов 💰, В банке: $getUserVar[bank;$mentioned[1;yes]] ФортиКоинов 💰, На банковской карте: $getUserVar[bank_blank;$mentioned[1;yes]] ФортиКоинов 💰
+🗓️ Дата создания: $creationDate[$mentioned[1;yes]]
+⚠️ Предупреждения: $getUserVar[Предупреждения;$mentioned[1;yes]]
+📷 Аватар:]
+$image[$replaceText[$replaceText[$checkCondition[$message[1]==server];true;$serverIcon;-1];false;$userAvatar[$replaceText[$replaceText[$checkCondition[$userExists[$message[1]]==true];true;$message[1];-1];false;$mentioned[1;yes];-1]];-1]?size=2048]
+$footer[Телепорт]
+$allowMention
